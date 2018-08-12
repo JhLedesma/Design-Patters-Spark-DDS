@@ -1,0 +1,56 @@
+{{# partial "CargarTabla" }}
+
+  		<style>
+  
+		.container {
+		     padding: 10px 25px 130px 25px;
+		}
+		      
+        table {border-style: groove;
+        border-color: #2A93DF;
+        table-layout: fixed;
+        }
+        
+		table td:nth-child(2)
+		{
+		border-style: groove;
+		  border-color:#2A93DF;
+		}
+		
+		table td:nth-child(1)
+		{
+		border-style: groove;
+		border-color:#2A93DF;
+		}
+  
+  		</style>
+  
+  <div class="row row2">
+        <div class="col-lg-12">
+
+                  <table class="table table-striped text-center text15 table-hover" >
+   
+                    <tr>
+
+                        <th class ="text-center text20">Cuenta</th>
+                        <th class = "text-center text20">Valor</th>
+
+                    </tr>
+
+                    {{#each listaDeCuentas}}
+
+                        <tr>
+                            <td>{{nombre}}</td>
+                            <td>{{valor}}</td>
+                        </tr>
+
+                     {{/each}}
+
+                </table>
+                </div>
+    </div> 
+
+
+{{/partial}}
+
+{{> empresas.hbs }}

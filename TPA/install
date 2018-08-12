@@ -1,0 +1,2 @@
+echo Installing
+mvn clean package

@@ -1,0 +1,255 @@
+{{# partial "contenido" }}
+    <head>
+        <!-- Css del home -->
+        <link rel="stylesheet"  href="home.css">
+    </head>
+
+    <body>
+
+    <div class="jumbotron text-center">
+        <h1>Business Program</h1>
+        <p>Tool for investors</p>
+    </div>
+
+
+    <div id="empresas" class="container-fluid contenedor-blanco">
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+
+            <div class="col-sm-8 contenido">
+                <div class="texto-botones">
+                    <div class="texto-contenido-ContenedorBlanco">
+                        <h2 class="titulo">Gestionar Empresas</h2>
+
+                        <ul class="letra-descripciones-contenedores">
+                            <li class="item-descripcion">
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                                <label class="descripcion">Puede crear una Empresa, con sus periodos y cuentas</label>
+                            </li>
+                            <li class="item-descripcion">
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                                <label class="descripcion">Puede obtener el valor de las cuentas de una empresa dado un periodo</label>
+                            </li>
+                            <li class="item-descripcion">
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                                <label class="descripcion">Puede eliminar una Empresa</label>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="buttons">
+
+                        {{#if email}}
+
+                            <div class="buttonSecundario">
+                                <a href="http://localhost:80/empresasCreacion"><button class="boton botonSecundarioContenedorBlanco">Eliminar</button></a>
+                                <a href="http://localhost:80/empresasCreacion"><button class="boton botonSecundarioContenedorBlanco">Crear</button></a>
+                            </div>
+
+                            <div class="buttonPrincipal">
+                                <a href="http://localhost:80/empresas"><button class="boton botonPrincipalContenedorBlanco"><span>Consultar</span></button></a>
+                            </div>
+
+
+                        {{else}}
+
+                            <div class="buttonSecundario">
+                                <button class="boton desabilitado">Eliminar</button>
+                                <button class="boton desabilitado">Crear</button>
+                            </div>
+
+                            <div class="buttonPrincipal">
+                                <a href="http://localhost:80/empresas"><button class="boton botonPrincipalContenedorBlanco"><span>Consultar</span></button></a>
+                            </div>
+
+                        {{/if}}
+
+                    </div>
+
+                </div>
+
+                <div class="img-rounded imagenes">
+                    <img class="img-responsive rounded float-right imagen" height = "400px" width = "300px"
+                         src="/imagenes/empresa.png" style="padding-left: 30px">
+                </div>
+
+            </div>
+
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="indicadores" class="container-fluid contenedor-gris">
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+
+            <div class="col-sm-8 contenido">
+
+                <div class="img-rounded imagenes">
+                    <img class="img-responsive rounded float-right imagen" height = "500px" width = "400px"
+                         src="/imagenes/economia.svg">
+                </div>
+
+                <div class="texto-botones">
+                    <div class="texto-contenido-ContenedorGris">
+                        <h2 class="titulo">Gestionar Indicadores</h2>
+
+                        <ul class="letra-descripciones-contenedores">
+                            <li class="item-descripcion">
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                                <label class="descripcion">Puede crear un indicadores, el cual es una operacion algebraica que puede estar compuesta de constantes, cuentas u otros indicadores</label>
+                            </li>
+                            <li class="item-descripcion">
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                                <label class="descripcion">Puede consultar el valor de un indicador, para una empresa y periodo paticular de la misma</label>
+                            </li>
+                            <li class="item-descripcion">
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                                <label class="descripcion">Puede eliminar un indicador</label>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="buttons">
+
+                        {{#if email}}
+
+                            <div class="buttonSecundario">
+                                <a href="http://localhost:80/indicadores/destruccion"><button type="button" class="boton botonSecundarioContenedorGris">Eliminar</button></a>
+                                <a href="http://localhost:80/indicadores/creacion"><button type="button" class="boton botonSecundarioContenedorGris">Crear</button></a>
+                            </div>
+
+                            <div class="buttonPrincipal">
+                                <a href="http://localhost:80/indicadores/evaluacion"><button class="boton botonPrincipalContenedorGris"><span>Consultar</span></button></a>
+                            </div>
+
+                        {{else}}
+
+                            <div class="buttonSecundario">
+                                <button type="button" class="boton desabilitado">Eliminar</button>
+                                <button type="button" class="boton desabilitado">Crear</button>
+
+                                <button class="boton desabilitado"><span>Consultar</span></button>
+                            </div>
+
+                        {{/if}}
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="metodologias" class="container-fluid contenedor-grisClaro">
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+
+            <div class="col-sm-8 contenido">
+
+                <div class="texto-botones">
+                    <div class="texto-contenido-ContenedorGrisClaro">
+                        <h2 class="titulo">Gestionar Metodologias</h2>
+
+                        <ul class="letra-descripciones-contenedores">
+                            <li class="item-descripcion">
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                                <label class="descripcion">Puede crear una Metodologia, la misma esta compuesta por una o varias condiciones, cada condicion se aplica a un indicador</label>
+                            </li>
+                            <li class="item-descripcion">
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                                <label class="descripcion">Puede comprobar que una Metodologia cumpla, es es asi si se cumplen todas las condiciones que contiene</label>
+                            </li>
+                            <li class="item-descripcion">
+                                <span class="glyphicon glyphicon-ok-circle"></span>
+                                <label class="descripcion">Puede eliminar una Metodologia</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="buttons">
+
+                        {{#if email}}
+
+                            <div class="buttonSecundario">
+                                <a></a><button type="button" class="boton botonSecundarioContenedorGrisClaro">Eliminar</button>
+                                <a></a><button type="button" class="boton botonSecundarioContenedorGrisClaro">Crear</button>
+                            </div>
+                            <div class="buttonPrincipal">
+                                <a href="http://localhost:80/metodologias/comparacion"><button class="boton botonPrincipalContenedorGrisClaro"><span>Consultar</span></button></a>
+                            </div>
+
+                        {{else}}
+
+                            <div class="buttonSecundario">
+                                <button type="button" class="boton desabilitado">Eliminar</button>
+                                <button type="button" class="boton desabilitado">Crear</button>
+
+                                <button class="boton desabilitado"><span>Consultar</span></button>
+                            </div>
+
+                        {{/if}}
+
+                    </div>
+                </div>
+
+
+                <div class="img-rounded imagenes">
+                    <img class="img-responsive rounded float-right imagen" height = "350px" width = "250px"
+                         src="/imagenes/metodologia.png" style="margin-left: 80px; margin-top: 30px; margin-right: 65px;">
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    // Store hash
+                    var hash = this.hash;
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function(){
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        })
+    </script>
+
+    </body>
+
+{{/partial}}
+
+{{# partial "Flechafooter" }}
+    <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+{{/partial}}
+
+{{> template.hbs }}

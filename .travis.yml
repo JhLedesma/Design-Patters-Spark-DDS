@@ -1,0 +1,16 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+before_install:
+  cd TPA/
+
+notifications:
+  email:
+    recipients:
+      - vieygonzalo@gmail.com
+      - xgen96@gmail.com
+      - bernaderi@hotmail.com
+      - jh.ledesmaa@gmail.com
+      - santiagoluccadeguevara@gmail.com

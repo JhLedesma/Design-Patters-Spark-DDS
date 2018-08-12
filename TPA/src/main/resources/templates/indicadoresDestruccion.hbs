@@ -1,0 +1,74 @@
+{{# partial "contenido" }}
+
+    <style>
+    
+      .jumbotron {
+            background-color: #2A93DF;
+            color: #fff;
+            padding: 100px 25px;
+            margin-bottom: 100px;
+        }
+
+        .formcito {
+            margin-top: 1%;
+        }
+        
+        .container {
+            padding: 10px 50px;
+            align-items: center;
+        }
+        
+        .botonDestruir{
+ 			margin: 100px;
+ 			width: 100px;
+        }
+        
+        .selector-indicador{
+            width: 500px;
+            height: 40px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .labelIndicador{
+            font-size: 20px;
+        }
+
+    </style>
+
+	<div class="jumbotron text-center">
+		
+	 <h1>Eliminar indicadores</h1>
+	 <p>Destruya los indicadores que crea que ya no le son relevantes</p>
+		
+	</div>
+ 
+    <div class = "container">
+ 
+  
+    <div class = "row text-center">
+ 
+ 
+    <form class="formcito" method="POST">
+    
+        <label class="labelIndicador" for="selector-indicador">Indicador</label>
+        <select class="form-control mi-control selector-indicador" name="nombre" id="selector-indicador">
+
+        <option disabled selected value> -- Seleccione un indicador -- </option>
+        {{#each indicadores}}
+            <option value="{{nombre}}">{{nombre}}</option>
+        {{/each}}
+
+        </select>
+
+        <input type="submit" class="btn btn-danger botonDestruir" value="Destruir"/>
+
+    </form>
+    
+    </div>
+    
+    </div>
+
+{{/partial}}
+
+{{> template.hbs }}

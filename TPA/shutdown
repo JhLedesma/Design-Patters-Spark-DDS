@@ -1,0 +1,12 @@
+echo Shutdown
+PROCESS_ID=$(pgrep -f TPANUAL-0.0.1-SNAPSHOT-jar-with-dependencies)
+if [ "$PROCESS_ID" ]
+
+then
+	kill $PROCESS_ID
+	echo Process killed
+
+else
+	echo No process to be killed
+
+fi

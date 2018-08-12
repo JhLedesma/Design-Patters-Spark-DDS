@@ -1,0 +1,7 @@
+-- Para que le peguen a la BD más fácil.
+
+SELECT empresa_nombre, cuenta_nombre, periodo_anio, cuenta_valor FROM db.empresa
+
+JOIN db.periodo ON db.periodo.empresa_fk_id = db.empresa.empresa_id
+
+JOIN db.cuenta ON db.periodo.periodo_id = db.cuenta.periodo_fk_id

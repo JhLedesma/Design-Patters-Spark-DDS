@@ -1,0 +1,40 @@
+{{# partial "contenido" }}
+
+    <style>
+        
+      .jumbotron {
+            background-color: #2A93DF;
+            color: #fff;
+          padding: 115px 25px;
+          height: 350px;
+        }
+        
+        .container {
+            padding: 10px 50px;
+            align-items: center;
+        }
+
+    </style>
+
+	
+	<div class="jumbotron text-center">
+	
+	        <h1>Crear indicadores</h1>
+	        <p>Cree los indicadores que mejor definan sus criterios de comparación de empresas</p>
+	
+	 </div>
+	 
+	 <div class = "container"> 
+	 
+	 {{#block "contenidoDeCreacion" }}
+		
+		<!--Es lo que difiere de cada tipo de creacion del indicador -->
+		
+	 {{/block }}
+	 
+	 </div>
+	 
+
+{{/partial}}
+
+{{> template.hbs }}

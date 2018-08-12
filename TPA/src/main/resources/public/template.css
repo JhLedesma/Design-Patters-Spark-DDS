@@ -1,0 +1,63 @@
+.navbar {
+    margin-bottom: 0;
+    background-color: #2A93DF;
+    z-index: 9999;
+    border: 0;
+    font-size: 20px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+.navbar a {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar li.active a {
+    color: #2A93DF !important;
+    background-color: #fff !important;
+    box-shadow: 8px 12px 16px rgba(0,0,0,0.2);
+    position: relative;
+    border: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.navCentral ul:hover{
+    box-shadow: 8px 12px 16px rgba(0,0,0,0.2);
+    position: relative;
+    border: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.navbar-nav.login {
+    position: absolute;
+    left: 77%;
+    transform: translatex(-50%);
+}
+
+.navbar-header.logo {
+    position: absolute;
+    left: 21%;
+    transform: translatex(-50%);
+}
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #2A93DF;
+}

@@ -1,0 +1,48 @@
+{{# partial "titulo" }}
+    <title>Consultorea.me</title>
+{{/partial}}
+
+
+<head>
+
+    <link rel="stylesheet"  href="login.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="application/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/md5.min.js"></script>
+
+</head>
+
+{{# partial "contenido" }}
+
+    <div class="contenido">
+        {{# block "retry" }}
+
+            <!--
+                En caso de tener que reintentar el login:
+                Revisar loginRetry.hbs
+             -->
+
+        {{/block}}
+
+        <div class="contenedor-form">
+            <form id="loginForm" class="form-login" method="POST">
+
+                <div class="contenedor-input">
+                    <label class="descriptor-input">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" value="">
+                </div>
+
+                <div class="contenedor-input">
+                    <label class="descriptor-input">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" value="">
+                </div>
+
+                <input type="submit" class="btn btn-primary btn-md btn-block" id="loginButton" value="Login">
+
+            </form>
+        </div>
+    </div>
+
+{{/partial}}
+
+{{> template.hbs }}

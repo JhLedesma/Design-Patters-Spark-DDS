@@ -1,0 +1,89 @@
+button {
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+footer {
+	text-algin: center;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+legend {
+	border-top: thin;
+	border-bottom: thin;
+	border-style: outset;
+	border-color: #75baff;
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+
+select {
+	margin-bottom: 2em;
+	border-radius: 5px;
+}
+
+td, th {
+    width: 50%;
+    text-align: left;
+}
+
+.alert, .alert-danger {
+	text-align:center;
+	display:block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.tabla-centrada {
+	margin-left: 5em;
+	margin-right: 5em;
+}
+
+.selector-redondeado {
+	margin-bottom: 2em;
+	padding-left: 4em;
+	padding-right: 4em;
+	border: thin;
+	border-style: solid;
+	border-color: #75baff;
+	border-radius: 10px;
+	background-color: #edf5fc;
+}
+
+.form-group {
+	padding: 1em;
+	margin-left: 35%;
+	margin-right: 35%;
+	text-align: center;
+}
+
+.jumbotron {
+	padding: 115px 25px;
+	height: 350px;
+	color: #fff;
+	background-color: #2A93DF;
+}
+
+.padding-center {
+	text-align: center;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 45%;
+	margin-right: 45%;
+}
+
+.well {
+	margin: 2em;
+	text-align: center;
+}

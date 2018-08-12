@@ -1,0 +1,213 @@
+{{# partial "contenido" }}
+    <style>
+        .jumbotron {
+            background-color: #2A93DF;
+            color: #fff;
+            padding: 100px 25px;
+            margin-bottom: 100px;
+        }
+
+        .container {
+            padding: 0px 25px;
+        }
+
+        .row.mi-fila{
+            padding: 0px 100px 100px 100px;
+        }
+
+        .row.primer-fila {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group.form-indicador {
+            margin-bottom: inherit;
+        }
+
+        .form-control.mi-control {
+            height: 40px;
+        }
+
+        .well.mi-well {
+            margin-bottom: inherit;
+        }
+
+        .clasificacion-input {
+            font-size: 20px;
+        }
+
+        .negrita{
+            font-weight: bold;
+        }
+        
+        .top-padding{
+        padding-top: 10px;
+        }  
+
+    </style>
+
+
+
+    <div class="jumbotron text-center">
+
+        <h1>Consultar indicadores</h1>
+        <p>Ponga a prueba a las empresas evaluandolas con sus indicadores </p>
+
+    </div>
+       
+
+    <div class = "container">
+
+        <div class="row mi-fila primer-fila">
+
+            <div class="col-lg-6 text-left">
+
+
+                <form class="form-group form-indicador" method ="POST">
+                    <label class="clasificacion-input" for="selector-indicador">Indicador</label>
+
+                    {{#if nombreIndicadorSeleccionado}}
+                       
+                      <select class="form-control mi-control selector-indicador" id="selector-indicador" name="nombreIndicador" onchange="this.form.submit()">
+                            <option value="{{nombreIndicadorSeleccionado}}">{{nombreIndicadorSeleccionado}}</option>
+                            
+                            {{#each indicadores}}
+                                <option value="{{nombre}}">{{nombre}}</option>
+                            {{/each}}
+                            
+                        </select>
+
+                    {{else}}
+                        
+                        <select class="form-control mi-control selector-indicador" name="nombreIndicador" id="selector-indicador" onchange="this.form.submit()">
+
+                            <option disabled selected value> -- Seleccione un indicador -- </option>
+                            {{#each indicadores}}
+                                <option value="{{nombre}}">{{nombre}}</option>
+                            {{/each}}
+
+                        </select>
+
+                    {{/if}}
+
+                </form>
+
+
+
+            </div>
+
+            <div class="col-lg-6 text-left">
+
+                <label class="clasificacion-input">Formula</label>
+
+                <div class="well mi-well">
+
+                    {{formula}}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class = "row mi-fila">
+
+            <div class = "col-lg-6 text-left">
+
+                <form class="form-group form-empresa" method ="POST">
+                    <label class="clasificacion-input" for="selector-empresa">Empresa</label>
+
+                    {{#if nombreEmpresaSeleccionada}}
+
+                        <select class="form-control mi-control selector-empresa" id="selector-empresa" name="nombreEmpresa" onchange="this.form.submit()">
+                            <option value="{{nombreEmpresaSeleccionada}}">{{nombreEmpresaSeleccionada}}</option>
+                            
+                            {{#each empresas}}
+                                <option value="{{nombre}}">{{nombre}}</option>
+                            {{/each}}
+                            
+                        </select>
+
+                    {{else}}
+
+                        <select class="form-control mi-control selector-empresa" id="selector-empresa" name="nombreEmpresa" onchange="this.form.submit()">
+
+                            <option disabled selected value> -- Seleccione una empresa -- </option>
+                            {{#each empresas}}
+                                <option value="{{nombre}}">{{nombre}}</option>
+                            {{/each}}
+
+                        </select>
+
+                    {{/if}}
+
+                </form>
+
+            </div>
+
+            <div class = "col-lg-6 text-left">
+
+                <form class="form-group form-periodo" method="POST">
+                    <label class="clasificacion-input" for="selector-periodo">Periodo</label>
+
+                    {{#if periodoSeleccionado}}
+
+                       <select class="form-control mi-control selector-periodo" id="selector-periodo" name="periodo" onchange="this.form.submit()">
+                       
+                            <option value="{{periodoSeleccionado}}">{{periodoSeleccionado}}</option>
+                            
+                             {{#each periodos}}
+                                <option value="{{anio}}">{{anio}}</option>
+                            {{/each}}
+                            
+                        </select>
+                       
+                     
+                    {{else}}
+                                        
+                        <select class="form-control mi-control selector-periodo" id="selector-periodo" name="periodo" onchange="this.form.submit()">
+
+                            <option disabled selected value> -- Seleccione un periodo -- </option>
+                            
+                            {{#each periodos}}
+                                <option value="{{anio}}">{{anio}}</option>
+                            {{/each}}
+                            
+                        </select>
+                        
+                    {{/if}}
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class = "row top-padding">
+
+            <div class = "col-lg-12 resultado text-center">
+
+                <p class = "negrita clasificacion-input">Resultado</p>
+
+
+                <div class="well">
+
+                    {{resultado}}
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    {{#block "NoHayCuenta" }}
+		
+		{{/block }}
+
+    </div>
+
+
+
+{{/partial}}
+
+{{> template.hbs }}

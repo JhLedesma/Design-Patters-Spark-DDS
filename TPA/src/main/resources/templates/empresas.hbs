@@ -1,0 +1,176 @@
+{{# partial "contenido" }}
+
+    <style>
+    
+        .jumbotron {
+            background-color: #2A93DF;
+            color: #fff;
+            padding: 100px 25px;
+            margin-bottom: 100px;
+        }
+        
+        .tabla {
+            padding-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .columna-tabla-izquierda {
+            margin-right: 200px;
+        }
+        .row2 {
+            padding-top: 100px;
+        }
+        .h1{
+            font-size: 5px;
+        }
+   
+        .row.primer-fila {
+            display: flex;
+            align-items: center;
+        }
+        
+        .container {
+            padding: 10px 25px 350px 25px;
+        }
+        
+        .form-control.mi-control {
+            height: 40px;
+        }
+        
+        .clasificacion-input {
+            font-size: 20px;
+        }
+          
+        th {
+        height: 50px;
+        background-color: #2A93DF;
+        color: white;
+        }
+        
+        .text15{
+        font-size:15px;
+        }
+        
+        .text20{
+        font-size:20px;
+        }      
+        
+    </style>
+
+    <div class="jumbotron text-center">
+
+        <h1>Consultar Cuentas</h1>
+        <p>Encuentre los valores de las cuentas de las empresas mas importantes</p>
+
+    </div>
+    
+    <div class = "container">
+
+    <div class="row primer-fila">
+
+        <div class="col-lg-6">
+
+            <div class="selector">
+
+                <form method="POST">
+                <label class="clasificacion-input" for="selector-empresa">Empresa</label>
+                
+                    {{#if nombreEmpresaElegida}}
+                        
+                        <select class="form-control mi-control selector-empresa" id="selector-empresa" name="nombreEmpresaElegida" onchange="this.form.submit()">
+                                            
+                       <option value="{{nombreEmpresaElegida}}">{{nombreEmpresaElegida}}</option>
+                            
+                            {{#each empresas}}
+
+                                <option value="{{nombre}}">{{nombre}}</option>
+
+                            {{/each}}
+                            
+                        </select>
+
+                    {{else}}
+                        
+                        <select class = "form-control mi-control" id="selector-empresa" name="nombreEmpresaElegida" onchange="this.form.submit()">
+
+
+                            <option disabled selected value> -- Seleccione una empresa --</option>
+
+                            {{#each empresas}}
+
+                                <option value="{{nombre}}">{{nombre}}</option>
+
+                            {{/each}}
+
+                        </select>
+
+                    {{/if}}
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-6 columna-derecha">
+
+            <div class="selector">
+
+                <form method="POST">
+                
+                   <label class="clasificacion-input" for="selector-periodo">Periodo</label>
+                   
+                    {{#if nombrePeriodoElegido}}
+
+                       <select class="form-control mi-control selector-periodo" id="selector-periodo" name="nombrePeriodoElegido" onchange="this.form.submit()">
+                       
+                            <option value="{{nombrePeriodoElegido}}">{{nombrePeriodoElegido}}</option>
+                            
+                             {{#each periodos}}
+
+                                <option value="{{anio}}">{{anio}}</option>
+
+                            {{/each}}
+                            
+                        </select>
+
+                    {{else}}
+                        
+                         <select class="form-control mi-control" id="selector-periodo" name="nombrePeriodoElegido" onchange="this.form.submit()">
+
+
+                            <option disabled selected value> -- Seleccione un periodo --</option>
+
+                            {{#each periodos}}
+
+                                <option value="{{anio}}">{{anio}}</option>
+
+                            {{/each}}
+
+                        </select>
+
+                    {{/if}}
+                    
+                </form>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    {{#block "CargarTabla" }}
+		
+		{{/block }}
+
+    </div>
+
+
+{{/partial}}
+
+
+
+{{> template.hbs }}

@@ -1,0 +1,212 @@
+.jumbotron {
+    background-color: #2A93DF;
+    color: #fff;
+    padding: 115px 25px;
+    height: 350px;
+}
+
+
+.titulo {
+    margin-bottom: 15px;
+    font-family: WeblySleek UI, Segoe UI, Helvetica Neue, Arial, sans-serif;
+    font-weight: 100;
+    line-height: 1.2;
+    font-size: 40px;
+    color: #1c2b39;
+}
+
+/*-----------------------------------------------Contenedores--------------------------------------------------------*/
+
+.contenedor-blanco {
+    background-color: #FFFFFF;
+    height: 450px;
+    /*padding-bottom: 50px;*/
+}
+
+.contenedor-gris {
+    background-color: #ECEFF1;
+    height: 450px;
+    padding-top: 70px;
+}
+
+.contenedor-grisClaro {
+    background-color: #F7F9FA;
+    height: 480px;
+    padding-top: 70px;
+}
+
+/*-------------------------------------------------Contenido---------------------------------------------------------*/
+
+.contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.texto-contenido-ContenedorBlanco span{
+    color: #31AEBF;
+    font-size: 24px;
+}
+
+.texto-contenido-ContenedorGris span{
+    color: #145367;
+    font-size: 24px;
+}
+
+.texto-contenido-ContenedorGrisClaro span{
+    color: #2B75BE;
+    font-size: 24px;
+}
+
+.letra-descripciones-contenedores {
+    line-height: 1.8;
+    color: #4e5758;
+    font-family: WeblySleek UI, Segoe UI, Helvetica Neue, Arial, sans-serif;
+    border: 0;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: .5rem;
+    font-size: 15px;
+    text-align: -webkit-match-parent;
+}
+
+.item-descripcion {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.descripcion {
+    font-size: 18px;
+    font-weight: inherit;
+    margin-left: 10px;
+}
+
+/*-----------------------------------------------botones-------------------------------------------------------------*/
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*------------------BotonPrincipal---------------------*/
+.buttonPrincipal button {
+    display: inline-block;
+    border-radius: 7px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 7px 15px;
+    width: auto;
+    height: 45px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 14px;
+}
+
+.buttonPrincipal span {
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.buttonPrincipal span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.buttonPrincipal:hover span {
+    padding-right: 20px;
+}
+
+.buttonPrincipal:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.botonPrincipalContenedorBlanco{
+    background-color: #31AEBF;
+}
+
+.botonPrincipalContenedorGris{
+    background-color: #145367;
+}
+
+.botonPrincipalContenedorGrisClaro{
+    background-color: #2B75BE;
+}
+
+/*------------------BotonSecundario---------------------*/
+
+.buttonSecundario button{
+    display: inline-block;
+    border-radius: 7px;
+    /*color: #282828;*/
+    text-align: center;
+    font-size: 20px;
+    padding: 7px 15px;
+    width: auto;
+    height: 45px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+.botonSecundarioContenedorBlanco{
+    color: #2f90a1;
+    background-color: white;
+    border: 2px solid #31AEBF;
+}
+
+.botonSecundarioContenedorBlanco:hover {
+    background-color: #31AEBF;
+    color: white;
+}
+
+.botonSecundarioContenedorGris{
+    color: #144458;
+    background-color: #ECEFF1;
+    border: 2px solid #145367;
+}
+
+.botonSecundarioContenedorGris:hover {
+    background-color: #145367;
+    color: white;
+}
+
+.botonSecundarioContenedorGrisClaro{
+    color: #2b60a9;
+    background-color: #F7F9FA;
+    border: 2px solid #2B75BE;
+}
+
+.botonSecundarioContenedorGrisClaro:hover {
+    background-color: #2B75BE;
+    color: white;
+}
+
+.desabilitado {
+    border: 2px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed !important;
+}
+
+.desabilitado:active,
+.desabilitado:focus {
+
+    outline: none;
+
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Css del template -->
+    <link rel="stylesheet"  href="/template.css">
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<!-------Barra de navagacion------->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header logo">
+        <a class="navbar-brand" href="http://localhost:80/#"><span class="glyphicon glyphicon-compressed"></span>BPTI</a>
+    </div>
+
+    <div class="navCentral">
+        <ul class="nav navbar-nav navbar-center">
+            <li>
+                <a href="http://localhost:80/#empresas">EMPRESAS</a>
+            </li>
+
+            <li>
+                <a href="http://localhost:80/#indicadores">INDICADORES</a>
+            </li>
+
+            <li>
+                <a href="http://localhost:80/#metodologias">METODOLOGIAS</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right login">
+        <li>
+            <a href="http://localhost:80/login">
+                {{#if email}}
+                    {{email}}
+                {{else}}
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    LOGIN
+                {{/if}}
+            </a>
+        </li>
+    </ul>
+</nav>
+
+ {{# block "contenido" }}
+        <!-------Aqui ira el contenido de las distintas paginas------->
+ {{/block}}
+
+
+</body>
+<!-------------------------------------------------------->
+
+<footer class="container-fluid text-center">
+    {{# block "Flechafooter" }}
+
+    {{/block}}
+
+    <p class="text-center">
+        &copy; 2017 FedeHelp.com
+    </p>
+</footer>
+
+</html>

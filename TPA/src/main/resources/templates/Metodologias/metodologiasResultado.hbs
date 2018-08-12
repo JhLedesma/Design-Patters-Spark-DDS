@@ -1,0 +1,32 @@
+{{# partial "resultado" }}
+
+<hr>
+
+<h1 class="well well-lg">Resultado de aplicar <strong>{{ metodologiaElegida.nombre }}</strong></h1>
+
+<div class="tabla-centrada">
+	<table id="tabla" class="table table-hover table-bordered">
+		<tr>
+			<th>Empresas</th>
+			<th>Resultados</th>
+		</tr>
+		{{# each resultados }}
+		{{# if resultado }}
+		<tr class="success">
+			<td>{{ empresa }}</td>
+			<td><i class="glyphicon glyphicon-thumbs-up"></i> Cumple</td>
+		{{else}}
+		<tr class="danger">
+			<td>{{ empresa }}</td>
+			<td><i class="glyphicon glyphicon-thumbs-down"></i>	R.I.P.</td>
+		{{/ if }}
+		</tr>
+		{{/ each }}
+	</table>
+</div>
+
+<a class="padding-center btn btn-info" href="#selector" role="button">Volver a comparar</a>
+
+{{/ partial }}
+
+{{> Metodologias/metodologiasComparacion.hbs }}

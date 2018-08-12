@@ -1,0 +1,113 @@
+{{# partial "contenidoDeCreacion" }}
+
+    <head>
+        <link rel="stylesheet"  href="/indicadoresCreacion.css">
+    </head>
+
+    <style>
+
+        .contenidoCentral h2.centrar {
+            padding-top: 0 !important;
+        }
+
+        .well {
+            height: 100px;
+            text-align: center;
+        }
+
+        .imagenes span{
+            margin-right: 5px;
+            color: #2B75BE;
+        }
+
+        .botonPrincipalDisabled{
+            pointer-events:none;
+            background-color: rgba(56, 56, 56, 0.18);
+        }
+
+        .botonSecundarioDisabled{
+            pointer-events:none;
+            background-color: rgba(56, 56, 56, 0.18);
+            color: white;
+        }
+
+    </style>
+
+    <body>
+
+    <div class="col-sm-2"></div>
+
+
+    <div class="col-sm-9">
+
+        <div class="caja">
+
+            <div class="well">
+
+                {{formula}}
+
+            </div>
+
+            <div class="contenido">
+
+                <div class="botonesICN">
+                    <form>
+                        <div class="btnDiv">
+                            <input type="submit" name="cosaAOperar" value="Indicador"  class="botonSecundario botonSecundarioDisabled" style="width: 110px"/>
+                        </div>
+                        <div class="btnDiv">
+                            <input type="submit" name="cosaAOperar" value="Cuenta"  class="botonSecundario botonSecundarioDisabled" style="width: 110px"/>
+                        </div>
+                        <div class="btnDiv">
+                            <input type="submit" name="cosaAOperar" value="Numero"  class="botonSecundario botonSecundarioDisabled" style="width: 110px"/>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contenidoCentral">
+                    <div class="centrar">
+                        <h3 style="padding-top: 65px; text-align: center; padding-left: 10px; padding-right: 10px">Seleccione un Operador o Cree el Indicador</h3>
+                    </div>
+                </div>
+
+                <div class="botonesCalcu">
+                    <form method="POST">
+                        <div class="btnSuma">
+                            <input type="submit" name="operador" value="+" class="botonSecundario iluminar"/>
+                        </div>
+                        <div class="btnResta">
+                            <input type="submit" name="operador" value="-" class="botonSecundario iluminar"/>
+                        </div>
+                        <div class="btnMulti">
+                            <input type="submit" name="operador" value="*" class="botonSecundario iluminar"/>
+                        </div>
+                        <div class="btnDiv">
+                            <input type="submit" name="operador" value="/" class="botonSecundario iluminar"/>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="centrar" style="margin-left: 23px">
+                <form method="POST">
+                    <input type="submit" name="operador" value="Crear" class="botonPrincipal iluminar"/>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-sm-1"></div>
+
+
+    </body>
+
+{{/partial}}
+
+{{> indicadoresCreacionTemplate.hbs }}
+
+
+

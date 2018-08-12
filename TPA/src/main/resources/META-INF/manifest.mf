@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: Grupo 3
+Build-Jdk: 1.8
+Created-By: Grupo 3
+Main-Class: Main.Main
+Archiver-Version: Plexus Archiver
