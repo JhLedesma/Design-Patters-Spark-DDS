@@ -34,8 +34,8 @@ import Observers.NotificadorModificacionEmpresa;
 public class Bootstrap {
 	public static void iniciarModelo() throws IOException {
 		iniciarOtros();
-		
-		iniciarRepositorios();
+
+		iniciarRepositoriosDePrueba();
 		
 		iniciarObjetos();
 	}
